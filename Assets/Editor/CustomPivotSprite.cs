@@ -6,8 +6,6 @@ using UnityEditor;
 [CustomEditor(typeof(PivotSprite))]
 public class CustomPivotSprite : Editor
 {
-    enum typeLL { a, b };
-    typeLL typel = typeLL.a;
     Vector3 poRoot, poLast;
     Sprite sprite;
     Bounds bound;
@@ -33,7 +31,7 @@ public class CustomPivotSprite : Editor
         if (Selection.activeTransform)
         {
             obj = Selection.activeTransform.gameObject;
-            obj.transform.localScale = new Vector3(1,1,1);
+         //   obj.transform.localScale = new Vector3(1,1,1);
             spriterender = obj.GetComponent<SpriteRenderer>();
             sprite = spriterender.sprite;
             bound = spriterender.bounds;
